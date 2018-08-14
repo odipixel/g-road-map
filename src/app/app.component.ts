@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
    title: string = 'Google direction api';
- public lat: Number = 24.799448
-public lng: Number = 120.979021
+public lat: Number = 12.9698
+public lng: Number = 77.7499
  
 public origin: {}
 public destination: {}
@@ -16,8 +16,8 @@ ngOnInit() {
   this.getDirection()
 }
 getDirection() {
-  this.origin = { lat: 24.799448, lng: 120.979021 }
-  this.destination = { lat: 24.799524, lng: 120.975017 }
+  this.origin = { lat: 12.9698, lng: 77.7499 }
+  this.destination = { lat: 12.9592, lng: 77.6974 }
  
   // this.origin = 'Taipei Main Station'
   // this.destination = 'Taiwan Presidential Office'

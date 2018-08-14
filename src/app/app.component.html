@@ -1,20 +1,21 @@
 <h1>{{ title }}</h1>
+<h1>Please select start point and end point</h1>
 <strong>Start: </strong>
 <select id="start" (change)="onChangeStart($event)">
-  <option value="penn station, new york, ny">Penn Station</option>
-  <option value="grand central station, new york, ny">Grand Central Station</option>
-  <option value="625 8th Avenue New York NY 10018">Port Authority Bus Terminal</option>
-  <option value="staten island ferry terminal, new york, ny">Staten Island Ferry Terminal</option>
-  <option value="101 E 125th Street, New York, NY">Harlem - 125th St Station</option>
+  <option value="silkboard">Silkboard</option>
+  <option value="International Tech Park, Bangalore">International Tech Park, Bangalore</option>
+  <option value="Majestic">Majestic</option>
+  <option value="Indira Nagar">Indira Nagar</option>
+  <option value="Ulsoor">Ulsoor</option>
 </select>
 <strong>End: </strong>
 <select id="end" (change)="onChangeEnd($event)">
-  <option value="260 Broadway New York NY 10007">City Hall</option>
-  <option value="W 49th St & 5th Ave, New York, NY 10020">Rockefeller Center</option>
-  <option value="moma, New York, NY">MOMA</option>
-  <option value="350 5th Ave, New York, NY, 10118">Empire State Building</option>
-  <option value="253 West 125th Street, New York, NY">Apollo Theatre</option>
-  <option value="1 Wall St, New York, NY">Wall St</option>
+  <option value="Bengaluru International Airport">Bengaluru International Airport</option>
+  <option value="White Field">White Field Railway Station</option>
+  <option value="Electronic City">Electronic City</option>
+  <option value="Koramangala">Koramangala</option>
+  <option value="HSR Layout">HSR Layout</option>
+  <option value="Jayanagar">Jayanagar</option>
 </select>
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
