@@ -1,22 +1,60 @@
-<h1>{{ title }}</h1>
-<h1>Please select start point and end point</h1>
-<strong>Start: </strong>
-<select id="start" (change)="onChangeStart($event)">
-  <option value="silkboard, Bangalore">Silkboard</option>
-  <option value="International Tech Park, Bangalore">International Tech Park, Bangalore</option>
-  <option value="Majestic, Bangalore">Majestic</option>
-  <option value="Indira Nagar, Bangalore">Indira Nagar</option>
-  <option value="Ulsoor, Bangalore">Ulsoor</option>
-</select>
-<strong>End: </strong>
-<select id="end" (change)="onChangeEnd($event)">
-  <option value="Bengaluru International Airport, Bangalore">Bengaluru International Airport</option>
-  <option value="White Field, Bangalore">White Field Railway Station</option>
-  <option value="Electronic City, Bangalore">Electronic City</option>
-  <option value="Koramangala, Bangalore">Koramangala</option>
-  <option value="HSR Layout, Bangalore">HSR Layout</option>
-  <option value="Jayanagar, Bangalore">Jayanagar</option>
-</select>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-3 mr-0" href="#">Google map</a>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="https://www.odipixel.com">odipixel</a>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-3 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Select start point and end point</span>
+         
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <form class="m-3">
+            <div class="form-group">
+              <select id="start" class="form-control" (change)="onChangeStart($event)">
+                <option value="silkboard, Bangalore">Silkboard</option>
+                <option value="International Tech Park, Bangalore">International Tech Park, Bangalore</option>
+                <option value="Majestic, Bangalore">Majestic</option>
+                <option value="Indira Nagar, Bangalore">Indira Nagar</option>
+                <option value="Ulsoor, Bangalore">Ulsoor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select id="end" class="form-control" (change)="onChangeEnd($event)">
+                <option value="Bengaluru International Airport, Bangalore">Bengaluru International Airport</option>
+                <option value="White Field, Bangalore">White Field Railway Station</option>
+                <option value="Electronic City, Bangalore">Electronic City</option>
+                <option value="Koramangala, Bangalore">Koramangala</option>
+                <option value="HSR Layout, Bangalore">HSR Layout</option>
+                <option value="Jayanagar, Bangalore">Jayanagar</option>
+              </select>
+            </div>
+          </form>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">{{ title }}</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <a href="https://github.com/odipixel/g-road-map"  class="btn btn-sm btn-outline-secondary">github</a>
+           
+          </div>
+         
+        </div>
+      </div>
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
 <agm-map [latitude]="lat" [longitude]="lng">
@@ -24,3 +62,9 @@
    <agm-direction [origin]="origin" [destination]="destination">
   </agm-direction>
 </agm-map>
+
+
+     
+    </main>
+  </div>
+</div>
